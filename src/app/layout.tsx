@@ -1,4 +1,13 @@
 import type { Metadata, Viewport } from 'next';
+import '@/styles/legacy/style.css';
+import '@/styles/legacy/responsive.css';
+import '@/styles/legacy/accessibility.css';
+import '@/styles/legacy/legal.css';
+import '@/styles/legacy/legislative.css';
+import '@/styles/legacy/statistics.css';
+import '@/styles/legacy/transparency.css';
+import '@/styles/legacy/transparency-v2.css';
+import './globals.css';
 import React from 'react';
 import HotlineBar from '@/components/layout/HotlineBar';
 import Header from '@/components/layout/Header';
@@ -6,11 +15,11 @@ import InfoBar from '@/components/layout/InfoBar';
 import Footer from '@/components/layout/Footer';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { SiteConfigProvider } from '@/contexts/SiteConfigContext';
-import { 
-  site, 
-  lguName, 
+import {
+  site,
+  lguName,
   labels,
-  configHelpers 
+  configHelpers
 } from '@/lib/config';
 
 export const viewport: Viewport = {
@@ -22,15 +31,15 @@ const siteDescription = configHelpers.getSiteDescription(site);
 const openGraphUrl = configHelpers.getOpenGraphUrl(site);
 
 export const metadata: Metadata = {
-  title: { 
-    default: `${siteTitle} | Official Portal`, 
-    template: `%s | ${siteTitle}` 
+  title: {
+    default: `${siteTitle} | Official Portal`,
+    template: `%s | ${siteTitle}`
   },
   description: siteDescription,
   keywords: [
-    siteTitle, 
-    `${lguName} ${site.province}`, 
-    `LGU ${lguName}`, 
+    siteTitle,
+    `${lguName} ${site.province}`,
+    `LGU ${lguName}`,
     `${labels.lguTypeLabel.toLowerCase()} services`,
     site.province,
     site.region,
@@ -46,9 +55,9 @@ export const metadata: Metadata = {
     images: [{ url: `${openGraphUrl}assets/images/banners/opengraph.png`, width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
-  icons: { 
-    icon: site.logo?.favicon || '/assets/images/logo/favicon.svg', 
-    apple: site.logo?.favicon || '/assets/images/logo/favicon.svg' 
+  icons: {
+    icon: site.logo?.favicon || '/assets/images/logo/favicon.svg',
+    apple: site.logo?.favicon || '/assets/images/logo/favicon.svg'
   },
 };
 
@@ -61,10 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/assets/css/responsive.css" />
-        <link rel="stylesheet" href="/assets/css/accessibility.css" />
-        <link rel="stylesheet" href="/assets/css/footer.css" />
       </head>
       <body>
         <SiteConfigProvider>
