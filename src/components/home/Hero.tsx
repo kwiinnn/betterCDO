@@ -3,10 +3,10 @@
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t } = useLanguage();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
 
