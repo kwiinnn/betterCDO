@@ -88,3 +88,128 @@
   --color-gray-800: #343a40;
   --color-gray-900: #212529;
 }
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* Leaflet popup fixes for Tailwind CSS conflicts */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+  color: #374151 !important;
+  padding: 16px;
+  min-width: 300px;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  border: none !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-popup-close-button {
+  color: #6b7280 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  padding: 4px 8px !important;
+  margin-right: 12px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #374151 !important;
+  background: transparent !important;
+}
+
+/* Ensure popup content displays properly */
+.leaflet-popup .leaflet-popup-content-wrapper .leaflet-popup-content {
+  width: auto !important;
+  white-space: normal !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Utility classes to mirror v3 `animation` map */
+@utility animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@utility animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-300) var(--color-gray-100);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}

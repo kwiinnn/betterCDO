@@ -1,12 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import '@/styles/legacy/style.css';
-import '@/styles/legacy/responsive.css';
-import '@/styles/legacy/accessibility.css';
-import '@/styles/legacy/legal.css';
-import '@/styles/legacy/legislative.css';
-import '@/styles/legacy/statistics.css';
-import '@/styles/legacy/transparency.css';
-import '@/styles/legacy/transparency-v2.css';
 import './globals.css';
 import React from 'react';
 import HotlineBar from '@/components/layout/HotlineBar';
