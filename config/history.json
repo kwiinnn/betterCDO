@@ -1,0 +1,17 @@
+{
+  "timeline": [
+    {
+      "year": "",
+      "title": "Foundation",
+      "description": "The municipality was founded."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-1",
+      "title": "Historical Fact",
+      "description": "Add historical facts about the municipality here.",
+      "icon": "bi-geo-alt-fill"
+    }
+  ]
+}

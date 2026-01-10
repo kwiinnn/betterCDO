@@ -1,0 +1,33 @@
+{
+  "lguType": "municipality", 
+  "municipality": "lgu",
+  "province": "Province",
+  "region": "Region",
+  "siteId": "betterlgu",
+  "domain": "betterlgu.org",
+  "tagline": "Your digital gateway to LGU Real services",
+  "themeColor": "#1a5f2a",
+  "contact": {
+    "phone": "",
+    "mobile": "",
+    "email": "",
+    "address": "Municipal Hall, LGU Name, Province",
+    "postalCode": ""
+  },
+  "social": {
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "discord": "",
+    "github": "https://github.com/BetterGov/betterlgu"
+  },
+  "coordinates": {
+    "lat": 14.6629,
+    "lng": 121.6047
+  },
+  "logo": {
+    "main": "/assets/images/logo/logo.svg",
+    "white": "/assets/images/logo/logo-white.svg",
+    "favicon": "/assets/images/logo/favicon.svg"
+  }
+}
