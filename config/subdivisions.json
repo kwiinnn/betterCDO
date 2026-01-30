@@ -1,13 +1,5 @@
 {
-  "type": "barangay",
+  "type": "municipality",
   "count": 0,
-  "items": [
-    {
-      "id": "sample-barangay",
-      "name": "Sample Barangay",
-      "leader": "Kap. Sample Name",
-      "leaderTitle": "Punong Barangay",
-      "phone": ""
-    }
-  ]
+  "items": []
 }

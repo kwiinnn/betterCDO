@@ -1,29 +1,27 @@
 {
-  "lguType": "municipality", 
-  "municipality": "lgu",
-  "province": "Province",
-  "region": "Region",
-  "siteId": "betterlgu",
-  "domain": "betterlgu.org",
-  "tagline": "Your digital gateway to LGU Real services",
-  "themeColor": "#0066eb",
+  "lguType": "province",
+  "municipality": "",
+  "province": "Misamis Oriental",
+  "region": "Region X (Northern Mindanao)",
+  "siteId": "bettercdo",
+  "domain": "bettercdo.org",
+  "tagline": "Your digital gateway to LGU Misamis Oriental services",
+  "themeColor": "#1a5f2a",
   "contact": {
-    "phone": "",
+    "phone": "09365625994",
     "mobile": "",
-    "email": "",
-    "address": "Municipal Hall, LGU Name, Province",
-    "postalCode": ""
+    "email": "helbirog@gmail.com",
+    "address": "Cagayan De Oro City, Misamis Oriental",
+    "postalCode": "9000"
   },
   "social": {
     "facebook": "",
     "twitter": "",
-    "linkedin": "",
-    "discord": "",
-    "github": "https://github.com/BetterGov/betterlgu"
+    "github": ""
   },
   "coordinates": {
-    "lat": 14.6629,
-    "lng": 121.6047
+    "lat": 8.477217,
+    "lng": 124.64592
   },
   "logo": {
     "main": "/assets/images/logo/logo.svg",
